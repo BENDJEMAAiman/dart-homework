@@ -58,6 +58,18 @@ void main(){
   print("label length: " + (label?.length).toString());
   
 
+  printGrade(88);
+
+  bool isLoggedIn = true; 
+  bool isAdmin = false;
+  int age = 20;
+
+  print((isLoggedIn && (age >= 18)) ? "Welcome back!"
+  : (isAdmin || (age > 25)) ? "Admin panel unlocked"
+  : (!isLoggedIn) ? "Guest mode"
+  : "no condition met");
+
+
 
 }
 
