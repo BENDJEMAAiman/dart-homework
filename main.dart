@@ -147,6 +147,18 @@ void main(){
   print(getFibonacci(5));
   print(sum);
 
+  List<String> courses = ["Dart", "Flutter", "Git", "Python", "SQL"];
+  print(courses[2]);
+  courses.add("Firebase");
+  courses.insert(1, "OOP");
+  courses.remove("Python");
+  for(int i = 0; i < courses.length; i++){
+    print("${i + 1}. ${courses[i]}");
+  }
+
+  print(courses.where((cours) =>
+    cours.length > 3).toList());
+    
 
 }
 
