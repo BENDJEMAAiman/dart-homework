@@ -37,6 +37,25 @@ void main(){
   print(email?.length);
   late String username = "admin";
   print(username);
+
+  //task1.4
+
+  const double taxRate = 0.19;
+  // taxRate = 0.20;
+  //first can't re-assign a const variable 
+
+  // int price = 49.99; 
+  //second we are using class int but initialize with double
+  double price = 49.99;
+
+  String? label;
+  // print("label length: " + label.length);
+  
+  /** third
+   * use ? for null safety cuz lable can be null
+   * must convert length to string in order to use print
+   */
+  print("label length: " + (label?.length).toString());
   
 
 }
