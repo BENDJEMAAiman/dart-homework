@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 void main(){
@@ -176,11 +177,75 @@ void main(){
   print(average);
 
 
+  Map<String, Map<String, dynamic>> students = {
+    "imane": {
+      "score": 445,
+      "attendence": 555,
+      "passed": true
+    },
+    "douaa": {
+      "score": 44,
+      "attendence": 90,
+      "passed": false
+    },
+    "souha": {
+      "score": 23,
+      "attendence": 22,
+      "passed": true
+    },
+    "a": {
+      "score": 12,
+      "attendence": 23,
+      "passed": false
+    },
+    "b": {
+      "score": 100,
+      "attendence": 120,
+      "passed": false
+    }
+    };
+
+    //add another element 
+    students["c"] = {
+      "score": 12,
+      "attendence": 33,
+      "passed": true
+    };
+
+    //print the updated length
+    print(students.length);
+
+
+    for (var names in students.keys){
+      students[names]?["passed"] = ((students[names]?["score"] >= 60 && students[names]?["attendence"] >= 75)) ? true : false;
+    }
+
+    for (var std in students.entries) {
+      print(std);
+    }
+
+    dynamic s = 0;
+    int j = 0;
+    for (var abc in students.values) {
+      s += abc["score"];
+      j += 1;
+    }
+    double aver = s / j;
+    print(aver);
+
+    List<String>? fStd = [];
+    for (var a in students.keys) {
+      if(students[a]?["passed"] == false){
+        fStd.add(a);
+      }
+    }
+    print(fStd);
+  }
 
 
 
 
-}
+
 
 void printGrade(int score){
   if(score < 0 || score > 100){
