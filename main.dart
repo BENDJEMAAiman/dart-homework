@@ -58,4 +58,24 @@ void main(){
   print("label length: " + (label?.length).toString());
   
 
+
+}
+
+void printGrade(int score){
+  if(score < 0 || score > 100){
+    print("error grade out of range");
+  }
+  else if(score >= 90){
+    print("A");
+  }
+  else if(score >= 75){
+    print("B");
+  }
+  else if(score >= 60){
+    print("C");
+  }
+  else{
+    (score < 60) ? "Fail" : "Pass";
+  }
+  
 }
