@@ -26,7 +26,17 @@ void main(){
   print(av);
 
   print(av.toString().length);
-  
+
+
+  //task1.3
+
+  String? city;
+  String? email;
+  print(city?.length);
+  email = "walid@dart.dz";
+  print(email?.length);
+  late String username = "admin";
+  print(username);
   
 
 }
