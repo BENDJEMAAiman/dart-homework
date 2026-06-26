@@ -131,6 +131,11 @@ void main(){
   print(buildProfile("imane", 20, "Student"));
   print(buildProfile("imane", 20));
   print(buildProfile("douaa", 55, "Instructor"));
+
+  //task3.3
+  print(celsiusToFahrenheit(3.3));
+  print(isLongString("im"));
+  print(square(2));
   
 
 
@@ -178,4 +183,9 @@ bool isPrime(int n){
 
 String buildProfile(String name, int age, [String role = "Student"]) =>
 "[$name] | Age: [$age] | Role: [$role]";
+
+double celsiusToFahrenheit(double c) => c * 9 / 5 + 32;
+bool isLongString(String s) => s.length > 10;
+int square(int n) => n * n;
+
 
