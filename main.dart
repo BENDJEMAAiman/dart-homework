@@ -1,3 +1,5 @@
+import 'dart:math';
+
 void main(){
   //task1
 
@@ -93,11 +95,15 @@ void main(){
     }
   }
 
+  
+
   int count = 10;
   while(count > 0){
     print(count);
     count -= 1;
   } print("lift off!");
+
+
 
   int attempts = 0;
   int correctPin = 1234;
@@ -110,6 +116,16 @@ void main(){
 
   print((attempts == 3) ? "account locked" : "access granted");
   
+
+  //task3.1
+  print(clamp(3, 2, 4));
+  print(clamp(5, 2, 4));
+  print(clamp(1, 2, 4));
+  print(repeatString("a", 0));
+  print(repeatString("b", 1));
+  print(repeatString("b", 2));
+  print(isPrime(5));
+  print(isPrime(4)); 
 
 
 }
@@ -132,3 +148,25 @@ void printGrade(int score){
   }
   
 }
+
+int clamp(int value, int min, int max) => 
+(value >= min && value <= max) ? value
+: (value < min) ? min
+: max;
+
+String repeatString(String s, int times){
+  for(int i = 1; i < times; i++){
+    s += s;
+  }
+  return s;
+}
+
+bool isPrime(int n){
+  int l = sqrt(n).toInt();
+  if (n <= 1) return false;
+  for(int i = 2; i <= l; i++){
+    if(n % i == 0) return false;
+  }
+  return true;
+}
+
