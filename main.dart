@@ -127,6 +127,12 @@ void main(){
   print(isPrime(5));
   print(isPrime(4)); 
 
+  //task3.2
+  print(buildProfile("imane", 20, "Student"));
+  print(buildProfile("imane", 20));
+  print(buildProfile("douaa", 55, "Instructor"));
+  
+
 
 }
 
@@ -169,4 +175,7 @@ bool isPrime(int n){
   }
   return true;
 }
+
+String buildProfile(String name, int age, [String role = "Student"]) =>
+"[$name] | Age: [$age] | Role: [$role]";
 
