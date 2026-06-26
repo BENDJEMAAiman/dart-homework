@@ -136,7 +136,16 @@ void main(){
   print(celsiusToFahrenheit(3.3));
   print(isLongString("im"));
   print(square(2));
+
+  //task3.4
+  print(getFibonacci(10));
   
+  int sum = 0;
+  for(var fib in getFibonacci(5)){
+    sum += fib;
+  }
+  print(getFibonacci(5));
+  print(sum);
 
 
 }
@@ -187,5 +196,24 @@ String buildProfile(String name, int age, [String role = "Student"]) =>
 double celsiusToFahrenheit(double c) => c * 9 / 5 + 32;
 bool isLongString(String s) => s.length > 10;
 int square(int n) => n * n;
+
+List<int> getFibonacci(int count){
+  List<int> l = [];
+  int prev = 0;
+  int act = 1;
+  
+  for(int i = 0; i < count; i++){
+    if (i == 0) l.add(0);
+    if (i == 1) l.add(1);
+    if (i >= 2){
+      int sum = prev + act;
+      l.add(sum);
+      prev = act;
+      act = sum;
+    }
+  }
+  return l;
+}
+
 
 
