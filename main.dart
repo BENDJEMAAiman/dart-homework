@@ -69,6 +69,19 @@ void main(){
   : (!isLoggedIn) ? "Guest mode"
   : "no condition met");
 
+  //task2.3
+
+  String day = "friday";
+  switch(day){
+    case "monday" || "tuesday" || "wednesday": print("work from office");
+    break;
+    case "thursday" || "friday": print("work from home");
+    break;
+    case "saturday" || "sunday": print("rest day");
+    break;
+    default: print("invalid day");
+  }
+  
 
 
 }
