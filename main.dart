@@ -81,6 +81,34 @@ void main(){
     break;
     default: print("invalid day");
   }
+
+
+  //task2.4
+  for(int i = 1; i <= 20; i++){
+    if(i % 2 == 0){
+      continue;
+    }
+    else{
+      print(i);
+    }
+  }
+
+  int count = 10;
+  while(count > 0){
+    print(count);
+    count -= 1;
+  } print("lift off!");
+
+  int attempts = 0;
+  int correctPin = 1234;
+  int testPin = 9999;
+  do{
+    attempts += 1;
+  } while(testPin != correctPin && attempts < 3);
+
+  /**we need to test which one of the conditions causes the quit of loop */
+
+  print((attempts == 3) ? "account locked" : "access granted");
   
 
 
