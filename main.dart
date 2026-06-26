@@ -160,6 +160,26 @@ void main(){
     cours.length > 3).toList());
     
 
+  List<int>scores = [55, 78, 42, 90, 63, 81, 38, 74];
+
+  print(scores.where((score) =>
+  score >= 60).toList().map((score) =>
+  "Pass: $score").toList());
+  
+  int summ = 0;
+  int N = 0;
+  for(var score in scores){
+    summ += score;
+    N += 1;
+  }
+  double average = summ / N;
+  print(average);
+
+
+
+
+
+
 }
 
 void printGrade(int score){
@@ -175,7 +195,7 @@ void printGrade(int score){
   else if(score >= 60){
     print("C");
   }
-  else{
+  else{ 
     (score < 60) ? "Fail" : "Pass";
   }
   
