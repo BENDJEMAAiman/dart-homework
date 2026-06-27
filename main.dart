@@ -240,6 +240,19 @@ void main(){
       }
     }
     print(fStd);
+
+
+    //task4.4
+    Set<String>backendSkills = {"dart", "sql", "firebase", "rest", "git"};
+    Set<String>frontendSkills = {"dart", "flutter", "html", "css", "git"};
+    print(frontendSkills.intersection(backendSkills));
+    print(backendSkills.difference(frontendSkills));
+    print(frontendSkills.difference(backendSkills));
+    print(frontendSkills.union(backendSkills));
+    backendSkills.add("dart");
+    print(backendSkills.length);
+    List<String> L = frontendSkills.union(backendSkills).toList();
+    print(L);
   }
 
 
